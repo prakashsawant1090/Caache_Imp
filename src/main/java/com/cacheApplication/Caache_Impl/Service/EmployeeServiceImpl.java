@@ -34,7 +34,7 @@ public class EmployeeServiceImpl implements EmployeeService {
     }
 
     @Override
-    @CachePut(cacheNames = CACHE_NAME,key = "result.id")
+    @CachePut(cacheNames = CACHE_NAME,key = "#result.id")
     public EmployeeDto createEmployee(EmployeeDto dto) {
         Employee employee = convertToEntity(dto);
         Employee saved = repo.save(employee);

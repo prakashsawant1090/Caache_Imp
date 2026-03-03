@@ -3,15 +3,17 @@ package com.cacheApplication.Caache_Impl.DTO;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class EmployeeDto {
+public class EmployeeDto implements Serializable {
 
     private Long id;
     private String name;
     private String email;
-    private double salary;
+    private Double salary;
 }
 
